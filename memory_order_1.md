@@ -116,9 +116,10 @@ typedef enum memory_order {
 限于篇幅，这里只介绍`memory_order_acquire`（简称Acquire）和`memory_order_release`（简称Release）这两种内存顺序，后续再介绍C++的其他内存顺序。
 下表给出了Acquire和Release的语义：
 
-|Acquire|读读|读写|
-|---|---|---|
-|Release|写写|读写|
+|内存顺序|语义|
+|---|---|
+|Acquire|读读、读写|
+|Release|写写、读写|
 
 即，Acquire要求读操作之后的读操作、读操作之后的写操作，这两种情况下的指令顺序不能改变；
 Release要求写操作之后的写操作、读操作之后的写操作，这两种情况下的执行顺序不能改变
