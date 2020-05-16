@@ -50,8 +50,8 @@ bool push( Node* new_node ) {
     // 标识当前线程要修改共享数据
     EB::enter();
 
-    Node * cur_top = top.load();
     while ( true ) {
+        Node * cur_top = top.load();
         new_node->next.store( cur_top );
         
         // CAS调用修改栈顶
@@ -70,7 +70,6 @@ Node * pop() {
     // 标识当前线程要修改共享数据
     EB::enter();
 
-    Node * cur_top;
     while ( true ) {
         Node * cur_top = top.load();
         if ( cur_top == nullptr ) {
