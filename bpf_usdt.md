@@ -1,4 +1,4 @@
-# 用BPF进行用户态tracing
+# 用BPF实现用户态tracing
 
 BPF是最近Linux内核领域热门的技术。传统的BPF指的是`tcpdump`命令用于过滤网络包的工具，现在BPF已经得到极大的扩展，不再是Berkeley Packet Filter的缩写对应的简单的网络包过滤工具。
 从Kernel 4.9之后，BPF已经成为一个完善的内核扩展工具，BPF在内核里运行一个sandbox，用于执行BPF的字节码（bytecode），
