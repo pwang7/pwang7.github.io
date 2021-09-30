@@ -6,3 +6,4 @@
 ## [垃圾回收机制与无锁化编程（Garbage Collection and Lock-Free Programming）](gc_and_lock_free.html)
 ## [用Rust实现RDMA编程](rust_rmda_1.html)
 ## [Rust实现RDMA异步编程（一）](rust_async_rdma_1.html)
+## [重新思考Rust Async - 如何实现高性能IO](high_performance_io.html)
